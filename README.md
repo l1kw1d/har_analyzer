@@ -42,3 +42,48 @@ You can provide specific regex patterns to match against the HAR data:
 ```bash
 python har_analyzer.py path/to/file.har -p "<script>alert\(\".*?\"\)</script>" "java"
 ```
+# Help Menu
+Access the help menu to view all options and usage details:
+```bash
+python har_analyzer.py --help
+```
+# Example Output
+Here’s an example output for a detected vulnerability:
+```bash
+Analyzing HAR file: example.har
+
+Request URL: http://example.com/vulnerable
+Response Status: 200
+  -> Match found for pattern: <script>alert\(.*?\)</script>
+
+```
+# File Structure
+```bash
+har-analyzer/
+├── har_analyzer.py       # Main Python script for HAR analysis
+├── requirements.txt      # (Optional) Dependencies list
+├── README.md             # Project documentation
+└── example.har           # Sample HAR file for testing (optional)
+```
+# Development
+Planned Features
+* Add support for batch processing of multiple HAR files.
+* Export matched results to CSV or JSON.
+* Expand regex patterns for advanced attack types (e.g., SQLi, CSRF).
+
+# Contributing
+I welcome contributions! To contribute:
+ 1. Fork the repository.
+ 2. Create a features branch:
+    ```bash
+    git checkout -b feature-name
+    ```
+ 3. Commit your changes:
+    ```bash
+    git commit -m "Add feature"
+    ```
+ 4. Push to your fork:
+    ```bash
+    git push origin feature-name
+    ```
+ 5. Submit a pull request to the main branch.
