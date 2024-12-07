@@ -36,7 +36,6 @@ Run the script with a HAR file:
 ```bash
 python har_analyzer.py path/to/file.har
 ```
-#Web security scanner
 # Search for Custom Payloads
 You can provide specific regex patterns to match against the HAR data:
 ```bash
